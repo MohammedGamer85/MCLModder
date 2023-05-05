@@ -14,6 +14,9 @@ namespace MCLModder
 {   
     public class publicFunctions
     {
-       
+       void test()
+        {
+
+        }
     }
 }

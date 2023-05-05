@@ -12,9 +12,8 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json.Converters;
 
-namespace MCLModder 
+namespace MCLModder
 {
-
         public class PvPhotbarGUI
         {
             public string SelectedPreset { get; set; }
