@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCLModder", "MCLModder.csproj", "{EFC05B42-7149-4FF7-8869-6E7EDB90FA9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFC05B42-7149-4FF7-8869-6E7EDB90FA9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFC05B42-7149-4FF7-8869-6E7EDB90FA9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFC05B42-7149-4FF7-8869-6E7EDB90FA9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFC05B42-7149-4FF7-8869-6E7EDB90FA9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01AC2B3E-ACDD-4946-885A-8C5AEF550DB3}
+	EndGlobalSection
+EndGlobal
