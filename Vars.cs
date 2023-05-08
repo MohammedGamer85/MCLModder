@@ -6,8 +6,14 @@ using MCLModder;
 
 namespace MCLModder
 {
-    class Vars
+    public class Vars
     {
-        
+        public string winUsername = System.Environment.UserName;
+        public string AppDirectory = Environment.CurrentDirectory;
+        public string DocFileDirecotry = "C:\\Users\\" + System.Environment.UserName + "\\Documents\\MCLModder\\";
+        public string SMPUuid;
+        public string SMPName;
+        public string SMPVersion;
+        public string SMPType;
     }
-}
+} 

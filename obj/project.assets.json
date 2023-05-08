@@ -61,11 +61,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\emanm\\source\\repos\\MCLModder\\MCLModder.csproj",
+      "projectUniqueName": "C:\\Users\\emanm\\Source\\Repos\\MohammedGamer85\\MCLModder\\MCLModder.csproj",
       "projectName": "MCLModder",
-      "projectPath": "C:\\Users\\emanm\\source\\repos\\MCLModder\\MCLModder.csproj",
+      "projectPath": "C:\\Users\\emanm\\Source\\Repos\\MohammedGamer85\\MCLModder\\MCLModder.csproj",
       "packagesPath": "C:\\Users\\emanm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emanm\\source\\repos\\MCLModder\\obj\\",
+      "outputPath": "C:\\Users\\emanm\\Source\\Repos\\MohammedGamer85\\MCLModder\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
