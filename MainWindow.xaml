@@ -1,0 +1,33 @@
+﻿<Window x:Class="MCLModder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MCLModder"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label HorizontalAlignment="Left" Margin="50,54,0,0" VerticalAlignment="Top">
+            <Label Content="ModFolder:" HorizontalAlignment="Left" VerticalAlignment="Center" Width="124" FontSize="20"/>
+        </Label>
+        <Button x:Name="button1" Content="Browse" HorizontalAlignment="Left" Margin="582,63,0,0" VerticalAlignment="Top" Click="Button_Click" Width="182" Height="29" RenderTransformOrigin="0.5,0.5" FontSize="18">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label HorizontalAlignment="Left" Margin="50,54,0,0" VerticalAlignment="Top">
+            <Label Content="ModFolder:" HorizontalAlignment="Left" VerticalAlignment="Center" Width="124" FontSize="20"/>
+        </Label>
+        <Label Content="Game Folder:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" FontSize="20" Margin="50,180,0,0"/>
+        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Margin="189,63,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="369" Height="29" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="TextBox2" HorizontalAlignment="Left" Margin="189,180,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="369" Height="28" FontSize="16" FontWeight="Bold"/>
+        <Button x:Name="button2" Content="Browse" HorizontalAlignment="Left" Margin="582,180,0,0" VerticalAlignment="Top" Width="182" Height="28" FontSize="16" Click="button2_Click"/>
+        <Button Content="OK" HorizontalAlignment="Center" Margin="0,298,0,0" VerticalAlignment="Top" Width="90" Height="90" Click="Button_Click_1" FontSize="48" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
