@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -10,26 +12,26 @@ namespace MCLModder
 {
     public class Extra
     {
-        /* Vars Vars = new Vars();
+        Vars Vars = new Vars();
         public bool importMod(string modlocation)
         {
             try
-            {   
-                Vars.modFiles = modlocation;
-                if (Vars.modFiles == null || Vars.gameFiles == null)
-                {
-                    MessageBox.Show("Mod/GameFiles is null [Please contact Mohammed85#5892 on discord if you see this error]");
-                    Environment.Exit(0);
-                }
-                else
-                {   
-                    File.Copy(Vars.modFiles, Vars.userDocFiles);
-                    return true;
-                }
-                
+            {
+                var slashM = "\\manifist.json";
+                Vars.modFiles = modlocation.Replace(slashM, "");
+
+                dynamic jsonfile = JsonConvert.DeserializeObject(File.ReadAllText("C:\\Users\\emanm\\Downloads\\SML\\manifist.json"));
+
+                string ModName = (jsonfile["Name"]);
+
+                Directory.Move(Vars.modFiles, Vars.userDocFiles + ModName);
+                return true;
             }
-            catch { return false; }
-            return false;
-        } */
+            catch
+            {
+                MessageBox.Show("A error happened please close and open the app again");
+                return false;
+            }
+        }
     }
 }

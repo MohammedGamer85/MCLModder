@@ -11,6 +11,7 @@ namespace MCLModder
     {
         public string gameFiles;
         public string modFiles;
-        public string userDocFiles = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/MCLModder/";
+        public string userDocFiles = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\MCLModder\\";
+        public string userAppDataFiles = System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\";
     }
 }

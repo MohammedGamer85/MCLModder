@@ -46,7 +46,7 @@ namespace MCLModder
         bool GameC;
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
+        {//Get the mod/skin pack folder
             OpenFileDialog OpenFileDialog = new OpenFileDialog();
             OpenFileDialog.Filter = "Mod manifist|*.json";
             object FDR = OpenFileDialog.ShowDialog();
@@ -57,25 +57,9 @@ namespace MCLModder
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            
             if (GameC == true && ModC == true)
             {
-                try
-                {
-                    var slashM = "\\manifist.json";
-                    Vars.modFiles = ModFile.Replace(slashM, "");
-
-                    dynamic jsonfile = JsonConvert.DeserializeObject(File.ReadAllText("C:\\Users\\emanm\\Downloads\\SML\\manifist.json"));
-
-                    string ModName = (jsonfile["Name"]);
-
-                    Directory.Move(Vars.modFiles, Vars.userDocFiles + ModName);
-
-                }
-                catch
-                {
-                    MessageBox.Show("A error happened please close and open the app again");
-                }
+                Extra.importMod(ModFile);
             }   
         }
     }
