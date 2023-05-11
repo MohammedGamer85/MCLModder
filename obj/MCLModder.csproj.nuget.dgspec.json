@@ -11,7 +11,7 @@
         "projectName": "MCLModder",
         "projectPath": "C:\\Users\\emanm\\source\\repos\\MohammedGamer85\\MCLModder\\MCLModder.csproj",
         "packagesPath": "C:\\Users\\emanm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emanm\\Source\\Repos\\MohammedGamer85\\MCLModder\\obj\\",
+        "outputPath": "C:\\Users\\emanm\\source\\repos\\MohammedGamer85\\MCLModder\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +44,12 @@
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

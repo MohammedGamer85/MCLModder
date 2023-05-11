@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "cf5spmkagLcowmZqLxCtaAPk+q2+5OKSUIXrOt/+l+373Tl5gH258R8v/Oyh5LnT7l3caDgYgMySC8YjZeU0Vw==",
+  "dgSpecHash": "ID4oLDJMvZH4CByIdRpWsIsr5Aphu4S7stK6zG84L+iuDUyx0bwj7d9bDYzj5vez+oVcBGBhHDx6RSLvgrPdfg==",
   "success": true,
   "projectFilePath": "C:\\Users\\emanm\\source\\repos\\MohammedGamer85\\MCLModder\\MCLModder.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\emanm\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

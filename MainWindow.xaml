@@ -7,10 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label HorizontalAlignment="Left" Margin="50,54,0,0" VerticalAlignment="Top">
-            <Label Content="ModFolder:" HorizontalAlignment="Left" VerticalAlignment="Center" Width="124" FontSize="20"/>
-        </Label>
-        <Button x:Name="button1" Content="Browse" HorizontalAlignment="Left" Margin="582,63,0,0" VerticalAlignment="Top" Click="Button_Click" Width="182" Height="29" RenderTransformOrigin="0.5,0.5" FontSize="18">
+        <Label HorizontalAlignment="Left" Margin="50,54,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button1" Content="Browse" HorizontalAlignment="Left" Margin="608,10,0,0" VerticalAlignment="Top" Click="Button_Click" Width="182" Height="37" RenderTransformOrigin="0.5,0.5" FontSize="18">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -20,14 +18,10 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Label HorizontalAlignment="Left" Margin="50,54,0,0" VerticalAlignment="Top">
-            <Label Content="ModFolder:" HorizontalAlignment="Left" VerticalAlignment="Center" Width="124" FontSize="20"/>
-        </Label>
-        <Label Content="Game Folder:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" FontSize="20" Margin="50,180,0,0"/>
-        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Margin="189,63,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="369" Height="29" FontSize="16" FontWeight="Bold"/>
-        <TextBox x:Name="TextBox2" HorizontalAlignment="Left" Margin="189,180,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="369" Height="28" FontSize="16" FontWeight="Bold"/>
-        <Button x:Name="button2" Content="Browse" HorizontalAlignment="Left" Margin="582,180,0,0" VerticalAlignment="Top" Width="182" Height="28" FontSize="16" Click="button2_Click"/>
-        <Button Content="OK" HorizontalAlignment="Center" Margin="0,298,0,0" VerticalAlignment="Top" Width="90" Height="90" Click="Button_Click_1" FontSize="48" FontWeight="Bold"/>
+        <Label HorizontalAlignment="Left" Margin="50,54,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Margin="134,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="452" Height="39" FontSize="22" FontWeight="Bold" Text=""/>
+        <Button Content="import" HorizontalAlignment="Left" Margin="610,352,0,0" VerticalAlignment="Top" Width="180" Height="72" Click="Button_Click_1" FontSize="48" FontWeight="Bold"/>
+        <Label Content="ModFolder:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="124" FontSize="20" Margin="10,10,0,0"/>
 
     </Grid>
 </Window>

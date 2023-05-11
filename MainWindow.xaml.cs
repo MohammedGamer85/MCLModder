@@ -12,11 +12,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.IO;
 using System.Xaml;
 using System.Xml;
 using System.Security;
+using System.Security.Cryptography.X509Certificates;
+using Newtonsoft;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace MCLModder
 {
@@ -25,10 +28,22 @@ namespace MCLModder
         public MainWindow()
         {
             InitializeComponent();
+            Vars Vars = new Vars();
+            if (Directory.Exists(Vars.userDocFiles))
+            { }
+            else
+            {
+                Directory.CreateDirectory(Vars.userDocFiles);
+            }
         }
 
+        Vars Vars = new Vars();
+        Extra Extra = new Extra();
+
         string ModFile;
+        bool ModC;
         string GameFile;
+        bool GameC;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -37,15 +52,31 @@ namespace MCLModder
             object FDR = OpenFileDialog.ShowDialog();
             TextBox1.Text = OpenFileDialog.FileName;
             ModFile = OpenFileDialog.FileName;
+            ModC = true;
         }
 
-        private void button2_Click(object sender, RoutedEventArgs e)
-        {   
-            OpenFileDialog OpenFileDialog = new OpenFileDialog();
-            OpenFileDialog.Filter = "gamelaunchhelper|*.exe";
-            object FDR = OpenFileDialog.ShowDialog();
-            TextBox2.Text = OpenFileDialog.FileName;
-            GameFile = OpenFileDialog.FileName;
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            
+            if (GameC == true && ModC == true)
+            {
+                try
+                {
+                    var slashM = "\\manifist.json";
+                    Vars.modFiles = ModFile.Replace(slashM, "");
+
+                    dynamic jsonfile = JsonConvert.DeserializeObject(File.ReadAllText("C:\\Users\\emanm\\Downloads\\SML\\manifist.json"));
+
+                    string ModName = (jsonfile["Name"]);
+
+                    Directory.Move(Vars.modFiles, Vars.userDocFiles + ModName);
+
+                }
+                catch
+                {
+                    MessageBox.Show("A error happened please close and open the app again");
+                }
+            }   
         }
     }
 }
