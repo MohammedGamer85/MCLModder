@@ -25,6 +25,13 @@ namespace MCLModder
                 string ModName = (jsonfile["Name"]);
 
                 Directory.Move(Vars.modFiles, Vars.userDocFiles + ModName);
+                if (applyMod(modlocation) == true){
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Mod Imported but not applyed to game, please try to reapply the mod or contact mod auther");
+                }
                 return true;
             }
             catch
@@ -32,6 +39,11 @@ namespace MCLModder
                 MessageBox.Show("A error happened please close and open the app again");
                 return false;
             }
+        }
+        public bool applyMod(string modlocation)
+        {
+
+            return false;
         }
     }
 }

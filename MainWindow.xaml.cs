@@ -46,7 +46,7 @@ namespace MCLModder
         bool GameC;
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {//Get the mod/skin pack folder
+        {
             OpenFileDialog OpenFileDialog = new OpenFileDialog();
             OpenFileDialog.Filter = "Mod manifist|*.json";
             object FDR = OpenFileDialog.ShowDialog();
