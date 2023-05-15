@@ -20,6 +20,7 @@ using System.Security.Cryptography.X509Certificates;
 using Newtonsoft;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Diagnostics;
 
 namespace MCLModder
 {
@@ -28,13 +29,14 @@ namespace MCLModder
         public MainWindow()
         {
             InitializeComponent();
-            Vars Vars = new Vars();
-            if (Directory.Exists(Vars.userDocFiles))
-            { }
-            else
-            {
-                Directory.CreateDirectory(Vars.userDocFiles);
-            }
+            Vars vars = new Vars();
+            Extra extra = new Extra();
+
+            if (!Directory.Exists(Vars.userDocFiles))
+            {Directory.CreateDirectory(Vars.userDocFiles);}
+
+            extra.setSelectedMod(0);
+
         }
 
         Vars Vars = new Vars();
@@ -42,8 +44,6 @@ namespace MCLModder
 
         string ModFile;
         bool ModC;
-        string GameFile;
-        bool GameC;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -57,7 +57,7 @@ namespace MCLModder
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            if (GameC == true && ModC == true)
+            if (ModC == true)
             {
                 Extra.importMod(ModFile);
             }   

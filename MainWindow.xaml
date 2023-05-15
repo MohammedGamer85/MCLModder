@@ -5,10 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MCLModder"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="850" ResizeMode="NoResize" Topmost="True" ShowInTaskbar="False">
     <Grid>
-        <Label HorizontalAlignment="Left" Margin="50,54,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button1" Content="Browse" HorizontalAlignment="Left" Margin="608,10,0,0" VerticalAlignment="Top" Click="Button_Click" Width="182" Height="39" RenderTransformOrigin="0.5,0.5" FontSize="22">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="101*"/>
+            <ColumnDefinition Width="99*"/>
+        </Grid.ColumnDefinitions>
+        <Label HorizontalAlignment="Left" Margin="67,71,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button1" Content="Browse" HorizontalAlignment="Left" Margin="221,27,0,0" VerticalAlignment="Top" Click="Button_Click" Width="182" Height="39" RenderTransformOrigin="0.5,0.5" FontSize="22" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -18,22 +22,19 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Label HorizontalAlignment="Left" Margin="50,54,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Margin="185,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" Height="39" FontSize="22" FontWeight="Bold" Text=""/>
-        <Button Content="import" HorizontalAlignment="Left" Margin="610,352,0,0" VerticalAlignment="Top" Width="180" Height="72" Click="Button_Click_1" FontSize="48" FontWeight="Bold"/>
-        <Label Content="Mod/Skins Folder:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" FontSize="20" Margin="10,10,0,0"/>
-        <TextBlock x:Name="ModTextBox" HorizontalAlignment="Left" Margin="676,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="114" FontSize="22" Text="Mod"/>
-        <Label Content="Mode:&#xD;&#xA;" HorizontalAlignment="Left" Margin="610,314,0,0" VerticalAlignment="Top" FontSize="20" Height="33"/>
-        <Button Content="Skin Packs" HorizontalAlignment="Left" Margin="610,294,0,0" VerticalAlignment="Top" Width="85" Click="Button_Click_2"/>
-        <Button Content="Mod Packs" HorizontalAlignment="Left" Margin="705,294,0,0" VerticalAlignment="Top" Width="85"/>
-        <TextBox HorizontalAlignment="Left" Margin="10,361,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="10,383,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="10,406,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="10,338,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="10,315,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Background="#FF08FF00"/>
-        <Button Content="Down" HorizontalAlignment="Left" Margin="135,370,0,0" VerticalAlignment="Top" Width="35" Height="54" Click="Button_Click_2"/>
-        <Button Content="UP" HorizontalAlignment="Left" Margin="135,315,0,0" VerticalAlignment="Top" Width="35" Height="55" Click="Button_Click_2"/>
-        <Label Content="==Saved Mod/Skin Packs==" HorizontalAlignment="Left" Margin="10,284,0,0" VerticalAlignment="Top" Width="160"/>
+        <Label HorizontalAlignment="Left" Margin="67,71,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Margin="202,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" Height="39" FontSize="22" FontWeight="Bold" Text="" Grid.ColumnSpan="2"/>
+        <Button Content="import" HorizontalAlignment="Left" Margin="223,369,0,0" VerticalAlignment="Top" Width="180" Height="72" Click="Button_Click_1" FontSize="48" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="Mod/Skins Folder:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" FontSize="20" Margin="27,27,0,0"/>
+        <TextBox x:Name="TextBox5" HorizontalAlignment="Left" Margin="27,378,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TextBox6" HorizontalAlignment="Left" Margin="27,400,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TextBox7" HorizontalAlignment="Left" Margin="27,423,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TextBox4" HorizontalAlignment="Left" Margin="27,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TextBox3" HorizontalAlignment="Left" Margin="27,332,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF08FF00"/>
+        <Button Content="Down" HorizontalAlignment="Left" Margin="152,400,0,0" VerticalAlignment="Top" Width="35" Height="41"/>
+        <Button Content="UP" HorizontalAlignment="Left" Margin="152,332,0,0" VerticalAlignment="Top" Width="35" Height="41"/>
+        <Label Content="==Saved Mod/Skin Packs==" HorizontalAlignment="Left" Margin="27,301,0,0" VerticalAlignment="Top" Width="160"/>
+        <Button Content="Apply" HorizontalAlignment="Left" Margin="152,376,0,0" VerticalAlignment="Top" Width="35"/>
 
     </Grid>
 </Window>
