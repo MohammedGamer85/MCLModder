@@ -27,15 +27,14 @@ namespace MCLModder
     public partial class MainWindow : Window
     {
         public MainWindow()
-        {
+        {   
             InitializeComponent();
             Vars vars = new Vars();
             Extra extra = new Extra();
+            MainWindow main = new MainWindow();
 
             if (!Directory.Exists(Vars.userDocFiles))
             {Directory.CreateDirectory(Vars.userDocFiles);}
-
-            extra.setSelectedMod(0);
 
         }
 

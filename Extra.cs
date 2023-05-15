@@ -179,25 +179,25 @@ namespace MCLModder
                 }
             }
             else 
-            {
-
+            {   
+                Vars vars = new Vars();
                     //Sets up everything needed for the imported mods list
                 dynamic modJsonfile = JsonConvert.DeserializeObject(File.ReadAllText(Vars.userDocFiles + "mods.json"));
-                for (int i = 0; modJsonfile["mods"][i-1] != null; i++)
+                for (int i = 0; ; i++)
                 {
-                    if(modJsonfile["mods"][i-1] == null)
+                    try
                     {
-                        break;
-                    }   
-                    Vars.importedMods[i - 1] = Convert.ToString(modJsonfile["mods"][i - 1]);
+                        vars.importedMods[i] = Convert.ToString(modJsonfile["mods"][i]);
+                    }
+                    catch { break; }
                 }
 
                 MainWindow mainWindow = new MainWindow();
-                mainWindow.TextBox3.Text = Vars.importedMods[0];
-                mainWindow.TextBox4.Text = Vars.importedMods[1];
-                mainWindow.TextBox5.Text = Vars.importedMods[2];
-                mainWindow.TextBox6.Text = Vars.importedMods[3];
-                mainWindow.TextBox7.Text = Vars.importedMods[4];
+                mainWindow.TextBox3.Text = vars.importedMods[0];
+                mainWindow.TextBox4.Text = vars.importedMods[1];
+                mainWindow.TextBox5.Text = vars.importedMods[2];
+                mainWindow.TextBox6.Text = vars.importedMods[3];
+                mainWindow.TextBox7.Text = vars.importedMods[4];
 
             }
         }
